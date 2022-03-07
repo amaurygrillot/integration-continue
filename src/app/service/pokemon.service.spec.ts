@@ -23,7 +23,7 @@ describe('PokemonService', () => {
     const mockedPokemon = { name: 'Pikachu'};
     let pikachu: Pokemon;
     pikachu = service.getPokemonByName('pikachu');
-    expect(pikachu.name).toBe('pikachu');
+    expect(pikachu.name).toBe('pol');
     http.expectOne('https://pokeapi.co/api/v2/pokemon/pikachu/');
     flush();
   }));
