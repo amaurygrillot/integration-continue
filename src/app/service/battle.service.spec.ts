@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { BattleService } from './battle.service';
 import Attack from '../model/attack';
@@ -11,7 +12,10 @@ describe('BattleService', () => {
   let carapuce: Pokemon;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+        imports : [
+        RouterTestingModule.withRoutes([]),
+    ]});
     let attack = [new Attack("Charge", 50, 100, "Normal", "Physic"), new Attack("Griffe", 40, 100, "Normal", "Physic")];
     salameche = new Pokemon("Salameche", 50, 146, 114, 104, 128,'', '', attack);
     pikachu = new Pokemon("Pikachu", 50, 142, 117, 90, 156, '', '', attack);
@@ -23,9 +27,9 @@ describe('BattleService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  
-  describe('Tests firstPokemonToAttack', () => {   
-      test('should pick pikachu', () => {       
+
+  describe('Tests firstPokemonToAttack', () => {
+      test('should pick pikachu', () => {
           expect(service.orderPokemonToAttack(pikachu, carapuce)).toEqual([pikachu, carapuce]);
       });
 
