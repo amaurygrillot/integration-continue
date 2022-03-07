@@ -1,0 +1,9 @@
+<div class="card" style="min-width: 500px">
+  <h3>{{pokemon.name}} Lv.{{pokemon.level}}</h3>
+  <progress-bar class="progress-bar"
+                style="min-width: 200px"
+                [progress]="((this.pokemon.currentHealth / this.pokemon.maxHealth) * 100).toString()" #prog></progress-bar>
+
+  <p>&nbsp;{{pokemon.currentHealth}}/{{pokemon.maxHealth}}</p>
+</div>
+<img src="{{ back ? pokemon.imageBack : pokemon.imageFront }}" alt="NOTFOUND"/>

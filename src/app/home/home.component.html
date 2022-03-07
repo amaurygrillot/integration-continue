@@ -1,0 +1,39 @@
+<div class="text-container" role="main">
+    <h1>{{title}}</h1>
+      <p><button class="btn-letsfight" (click)="fight($event)">Lancer le combat</button></p>
+      <div class="left-content">
+        <table>
+          <tbody>
+          <tr>
+            <td class="onColumn" *ngFor="let pokemon of pokemonList; let i = index">
+              <label>
+                <p>
+                <input (click)="selectPokemon1($event)" type="radio" name="pokemon-left" value="{{pokemon.name}}">
+                {{pokemon.name}}
+                </p>
+                <img src={{pokemon.imageFront}}>
+              </label>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right-content">
+        <table>
+          <tbody>
+          <tr>
+            <td class="onColumn" *ngFor="let pokemon of pokemonList; let i = index">
+              <label>
+                <p>
+                  <input (click)="selectPokemon2($event)" type="radio" name="pokemon-right" value="{{pokemon.name}}">
+                  {{pokemon.name}}
+                  <img src={{pokemon.imageFront}}>
+                </p>
+              </label>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
+<router-outlet></router-outlet>

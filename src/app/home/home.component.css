@@ -1,0 +1,30 @@
+.left-content {
+  font-size: 12px;
+  height: 500px;
+  overflow: auto;
+  border: 3px solid;
+  width: 300px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+}
+.right-content{
+  font-size: 12px;
+  height: 500px;
+  overflow: auto;
+  border: 3px solid;
+  width: 300px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+}
+.onColumn{
+  display:block;
+  width:150px;
+  word-wrap:break-word;
+}
+.text-container{
+  text-align: center;
+}
+
+.btn-letsfight {
+  background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%);
+}

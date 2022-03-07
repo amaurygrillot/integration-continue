@@ -1,0 +1,8 @@
+<div class="message" *ngFor="let log of loggerService.logs" #myScrollContainer>
+      <p *ngIf="log.type == 0" appColorMessage [color]="'black'">{{log.message}}</p>
+      <p *ngIf="log.type == 1" appColorMessage [color]="'blue'">{{log.message}}</p>
+      <p *ngIf="log.type == 2" appColorMessage [color]="'green'">{{log.message}}</p>
+      <p *ngIf="log.type == 3" appColorMessage [color]="'red'">{{log.message}}</p>
+      <p *ngIf="log.type == 4">{{today | date : 'dd/MM/yyyy hh:mm:ss'}}</p>
+      <p *ngIf="log.type == 5">{{log.defender}} prends {{log.damage | number:'1.1-1'}} dégâts</p>
+</div>

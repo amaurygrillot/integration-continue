@@ -1,0 +1,24 @@
+<div class="content" >
+  <div class="customPannel">
+    <button class="btn-start" (click)="goBack()">
+      Revenir à la sélection des pokémon
+    </button>
+    <button class="btn-start" id="fight" *ngIf="!gameStarted" value="Fight" (click)="fight()">
+      Lancer le combat
+    </button>
+    <button class="btn-pause" id="pause" value="Pause" (click)="handleClick()" *ngIf="!battleService.isPaused && gameStarted">
+      Pause
+    </button>
+    <button class="btn-play" id="play" value="Play" (click)="handleClick()" *ngIf="battleService.isPaused && gameStarted">
+      Reprendre
+    </button>
+    <button class="btn-reset" id="reset" value="Reset" (click)="reset()" *ngIf="gameStarted">
+      Redémarrer
+    </button>
+    <div class="card background-battle-pokemon">
+          <app-pokemon class="pokemon1" [pokemon]="pokemon1" [back] = "true"></app-pokemon>
+          <app-pokemon class="pokemon2" [pokemon]="pokemon2" [back] = "false"></app-pokemon>
+    </div>
+  </div>
+</div>
+<app-message class="highlight-card message content" [logs]="loggerService.logs"></app-message>

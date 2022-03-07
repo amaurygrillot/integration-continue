@@ -1,0 +1,45 @@
+.background-battle-pokemon{
+  width: 200px;
+  height: 180px;
+  border: 0;
+}
+
+.pokemon2{
+  font-size: 12px;
+  margin-right: -120px;
+  text-align: center;
+  height: 210px;
+}
+
+.pokemon1{
+  font-size: 12px;
+  padding: 120px;
+  text-align: center;
+  height: 0px;
+}
+
+.message{
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  margin-top: 90px;
+  width: 600px;
+  overflow: auto;
+  border: 3px solid;
+  border-radius: 5px;
+}
+
+.btn-play {
+  background-image: linear-gradient(to right, #b6f3bd 0%, #179938 51%, #b6f3bd 100%);
+}
+.btn-pause {
+  background-image: linear-gradient(to right, #ffdc17 0%, #e0b130 51%, #ffdc17 100%);
+}
+.btn-start {
+background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%);
+}
+.btn-reset {
+  background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+}
+
+
